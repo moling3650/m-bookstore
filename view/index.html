@@ -1,3 +1,28 @@
-<h1>Hello <%=name%></h1>
-
-<script src="/static/main.js"></script>
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta name="format-detection" content="telephone=no">
+  <title>书城首页</title>
+  <link rel="stylesheet" href="/static/css/reset.css" />
+  <link rel="stylesheet" href="/static/css/main.css" />
+</head>
+<body>
+  <div id="root">
+    <% include include/header.html %>
+    <div>
+      <% include include/index-top.html %>
+      <% include include/index-hot.html %>
+      <% include include/index-recommend.html %>
+      <% include include/index-female.html %>
+      <% include include/index-male.html %>
+      <% include include/index-free.html %>
+      <% include include/index-bottom.html %>
+    </div>
+  </div>
+  <script src="/static/js/lib/vue.min.js"></script>
+  <script src="/static/js/lib/zepto.min.js"></script>
+  <script src="/static/js/page/index.js"></script>
+</body>
+</html>

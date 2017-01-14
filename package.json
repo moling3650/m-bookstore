@@ -11,14 +11,16 @@
     "url": "git+https://github.com/moling3650/m-bookstore.git"
   },
   "dependencies": {
-    "co-views": "^2.1.0",
     "auto-reload": "^0.0.2",
-    "koa": "^1.2.0",
+    "co-views": "^2.1.0",
     "ejs": "^2.4.2",
+    "koa": "^1.2.0",
     "koa-route": "^2.4.2",
-    "koa-views": "^4.1.0",
     "koa-static-server": "^0.1.8",
-    "webpack": "^1.13.1"
+    "koa-views": "^4.1.0",
+    "vue": "^1.0.28",
+    "webpack": "^1.13.1",
+    "zepto": "^1.2.0"
   },
   "keywords": [
     "web",
