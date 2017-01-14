@@ -1,1 +1,98 @@
-<div class="header">头部</div>
+<style type="text/css">
+
+.header-tab {
+  position: relative;
+  padding: 0 90px;
+  border-bottom: 1px solid  #ddd;
+  text-align: center;
+  line-height: 44px;
+  background: #efeff0;
+}
+
+.header-tab a:before {
+  content: '\4e66\67b6';
+  display: block;
+  width: 2em;
+  margin: 0 auto;
+}
+
+.header-tab a:first-child:before {
+  content: '\4e66\57ce';
+}
+
+.header-tab i {
+  bottom: -1px;
+}
+
+.header-tab i:before {
+  content: '';
+  display: block;
+  width: 34px;
+  height: 2px;
+  margin: 0 auto;
+  background: #777;
+}
+
+.header-user {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  background: url(http://image.read.duokan.com/mfsv2/download/fdsc3/p01j041d5DOT/boUg2EJlVetOMC.png) no-repeat center;
+  -webkit-background-size: 16px;
+  background-size: 16px;
+}
+
+.header-checkin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 44px;
+  height: 44px;
+  background: url(http://image.read.duokan.com/mfsv2/download/s010/p01O5K5DzsAZ/2ZODzjwkRQh7l3.png) no-repeat center;
+  -webkit-background-size: 22px;
+  background-size: 22px;
+}
+
+.swipe-tab {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.swipe-tab a {
+  float: left;
+  text-align: center;
+  --webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.swipe-tab i {
+  position: absolute;
+  left: 0;
+  -webkit-transition: -webkit-transform .3s ease-out;
+}
+
+.swipe-tab_2 a {
+  width: 50%;
+}
+
+.f-cb:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+</style>
+
+<div class="header-tab" id="app_header">
+  <div class="swipe-tab swipe-tab_2 f-cb">
+    <a href="javascript:"></a>
+    <a href="javascript:"></a>
+    <i style="-webkit-transition-duration: 0s;transition-duration: 0s;-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);"></i>
+  </div>
+  <em class="header-user"></em>
+  <em class="header-checkin"></em>
+</div>
