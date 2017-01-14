@@ -2,9 +2,22 @@
 
 let fs = require('fs')
 
-// 获取mock的测试数据
-exports.get_test_data = function () {
-  let content = fs.readFileSync('./mock/test.json', 'utf-8')
+// 获取首页的数据
+exports.get_index_data = function () {
+  let content = fs.readFileSync('./mock/home.json', 'utf-8')
+  return content
+}
+
+// 获取排行榜的数据
+exports.get_rank_data = function () {
+  let content = fs.readFileSync('./mock/rank.json', 'utf-8')
+  return content
+}
+
+// 获取一本书的数据
+exports.get_book_data = function (id) {
+  id = id || '18218'
+  let content = fs.readFileSync(`./mock/book/${id}.json`, 'utf-8')
   return content
 }
 
