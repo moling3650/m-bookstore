@@ -28,5 +28,14 @@ app.use(controller.get('/', function* () {
   this.body = service.get_test_data()
 }))
 
+app.use(controller.get('/ajax/search', function* () {
+  this.set('Cache-Control', 'no-cache')
+  // 获取查询字符串的参数
+  let qs = require('querystring')
+  let {start, end, keyword} = qs.parse(this.req._parsedUrl.query)
+  // 获取搜索数据
+  this.body = yield service.get_search_data(start, end, keyword)
+}))
+
 app.listen(5000)
 console.log('Koa server is started')
