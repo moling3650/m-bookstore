@@ -40,6 +40,21 @@ app.use(controller.get('/ajax/book', function* () {
   this.body = service.get_book_data(id || null)
 }))
 
+app.use(controller.get('/ajax/female', function* () {
+  this.set('Cache-Control', 'no-cache')
+  this.body = service.get_female_data()
+}))
+
+app.use(controller.get('/ajax/male', function* () {
+  this.set('Cache-Control', 'no-cache')
+  this.body = service.get_male_data()
+}))
+
+app.use(controller.get('/ajax/category', function* () {
+  this.set('Cache-Control', 'no-cache')
+  this.body = service.get_category_data()
+}))
+
 app.use(controller.get('/ajax/search', function* () {
   this.set('Cache-Control', 'no-cache')
   // 获取查询字符串的参数

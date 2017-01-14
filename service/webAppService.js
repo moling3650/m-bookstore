@@ -21,6 +21,24 @@ exports.get_book_data = function (id) {
   return content
 }
 
+// 获取女性频道的数据
+exports.get_female_data = function () {
+  let content = fs.readFileSync('./mock/channel/female.json', 'utf-8')
+  return content
+}
+
+// 获取男性频道的数据
+exports.get_male_data = function () {
+  let content = fs.readFileSync('./mock/channel/male.json', 'utf-8')
+  return content
+}
+
+// 获取分类的数据
+exports.get_category_data = function () {
+  let content = fs.readFileSync('./mock/category.json', 'utf-8')
+  return content
+}
+
 // 获取搜索的数据
 exports.get_search_data = function (start, end, keyword) {
   return function (callback) {
