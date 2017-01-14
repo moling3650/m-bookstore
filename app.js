@@ -63,5 +63,38 @@ app.use(controller.get('/ajax/search', function* () {
   this.body = yield service.get_search_data(start, end, keyword)
 }))
 
+app.use(controller.get('/', function* () {
+  this.set('Cache-Control', 'no-cache')
+  this.body = yield render('index')
+}))
+
+app.use(controller.get('/book', function* () {
+  this.set('Cache-Control', 'no-cache')
+  let {id} = qs.parse(this.req._parsedUrl.query)
+  this.body = yield render('book', {id})
+}))
+
+app.use(controller.get('/male', function* () {
+  this.set('Cache-Control', 'no-cache')
+  this.body = yield render('male')
+}))
+
+app.use(controller.get('/female', function* () {
+  this.set('Cache-Control', 'no-cache')
+  this.body = yield render('female')
+}))
+
+app.use(controller.get('/rank', function* () {
+  this.set('Cache-Control', 'no-cache')
+  this.body = yield render('rank')
+}))
+
+app.use(controller.get('/category', function* () {
+  this.set('Cache-Control', 'no-cache')
+  this.body = yield render('category')
+}))
+
+
+
 app.listen(5000)
 console.log('Koa server is started')
