@@ -196,31 +196,31 @@
     </div>
   </div>
   <ul class="list-h5">
-    <li>
+    <li v-for="book in recommend | limitBy 3" >
       <a href="/book?id=1">
         <div class="book-h5">
           <div class="book-h5__cover">
-            <img src="http://cover.read.duokan.com/mfsv2/download/s010/p01HRnQuOjiG/KhLgJZJ4erR4e7.jpg">
+            <img :alt="book.title" :src="book.cover">
             <p class="book-h5__finish">完结</p>
           </div>
           <div class="book-h5__info">
-            <p class="book-h5__title">书名</p>
-            <p class="book-h5__author">作者</p>
-            <p class="book-h5__summary">简介</p>
+            <p class="book-h5__title">{{book.title}}</p>
+            <p class="book-h5__author">{{book.author}}</p>
+            <p class="book-h5__summary">{{book.summary}}</p>
             <div class="book-h5__wrap">
-              <div class="book-h5__tag">标签</div>
+              <div class="book-h5__tag" v-for="tag in book.tags">{{ tag }}</div>
             </div>
           </div>
         </div>
       </a>
     </li>
-    <li>
+    <li v-for="book in recommend | limitBy 6 3">
       <a href="/book?id=1">
         <div class="book-h5 book-h5__no-img">
-          <span class="book-h5_no-img__order">01</span>
+          <span class="book-h5_no-img__order">0{{ $index + 4 }}</span>
           <div class="book-h5_no-img__info">
             <p class="book-h5_no-img__title">
-              书籍名称
+              {{book.title}}
             </p>
           </div>
         </div>
