@@ -93,9 +93,9 @@
 
 <div class="header-tab" id="app_header">
   <div class="swipe-tab swipe-tab_2 f-cb">
-    <a class="swipe-tab__on" href="javascript:"></a>
-    <a href="javascript:"></a>
-    <i style="-webkit-transition-duration: 0s;transition-duration: 0s;-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);"></i>
+    <a :class="tab_1_class" @click="tabSwitch(0)" href="javascript:"></a>
+    <a :class="tab_2_class" @click="tabSwitch(1)" href="javascript:"></a>
+    <i style="width: 277px;transition-duration: {{ header_duration }}s;transform: translateX({{header_position}}px);"></i>
   </div>
   <em class="header-user"></em>
   <em class="header-checkin"></em>
