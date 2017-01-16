@@ -197,7 +197,7 @@
   </div>
   <ul class="list-h5">
     <li v-for="book in recommend | limitBy 3" >
-      <a href="/book?id=1">
+      <a href="/book?id=">
         <div class="book-h5">
           <div class="book-h5__cover">
             <img :alt="book.title" :src="book.cover">
@@ -215,7 +215,7 @@
       </a>
     </li>
     <li v-for="book in recommend | limitBy 6 3">
-      <a href="/book?id=1">
+      <a href="/book?id=">
         <div class="book-h5 book-h5__no-img">
           <span class="book-h5_no-img__order">0{{ $index + 4 }}</span>
           <div class="book-h5_no-img__info">
