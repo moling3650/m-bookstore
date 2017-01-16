@@ -1,8 +1,11 @@
 'use strict'
 $.get('/ajax/', (d) => {
+  let offset = $($('.swipe-tab').find('a')[0]).offset()
   new Vue({
     el: '#root',
     data: {
+      screen_width: Math.max($(window).width(), 320),
+      index_header_tab_width: offset.width,
       top: d.items[0].data.data,
       hot: d.items[1].data.data,
       recommend: d.items[2].data.data,
@@ -27,8 +30,8 @@ $.get('/ajax/', (d) => {
           this.tab_1_class = 'swipe-tab__on'
           this.tab_2_class = ''
         } else {
-          this.position = (-734)
-          this.header_position = 277
+          this.position = (-this.screen_width)
+          this.header_position = this.index_header_tab_width
           this.tab_1_class = ''
           this.tab_2_class = 'swipe-tab__on'
         }

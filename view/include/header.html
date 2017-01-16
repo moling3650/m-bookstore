@@ -95,7 +95,7 @@
   <div class="swipe-tab swipe-tab_2 f-cb">
     <a :class="tab_1_class" @click="tabSwitch(0)" href="javascript:"></a>
     <a :class="tab_2_class" @click="tabSwitch(1)" href="javascript:"></a>
-    <i style="width: 277px;transition-duration: {{ header_duration }}s;transform: translateX({{header_position}}px);"></i>
+    <i style="width: {{ index_header_tab_width }}px;transition-duration: {{ header_duration }}s;transform: translateX({{header_position}}px);"></i>
   </div>
   <em class="header-user"></em>
   <em class="header-checkin"></em>
