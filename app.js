@@ -94,6 +94,11 @@ app.use(controller.get('/category', function* () {
   this.body = yield render('category')
 }))
 
+app.use(controller.get('/reader', function* () {
+  this.set('Cache-Control', 'no-cache')
+  this.body = yield render('reader')
+}))
+
 
 
 app.listen(5000)
