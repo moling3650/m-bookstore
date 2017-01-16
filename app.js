@@ -71,7 +71,7 @@ app.use(controller.get('/', function* () {
 app.use(controller.get('/book', function* () {
   this.set('Cache-Control', 'no-cache')
   let {id} = qs.parse(this.req._parsedUrl.query)
-  this.body = yield render('book', {id})
+  this.body = yield render('book', {nav: '书籍详情',bookId: id})
 }))
 
 app.use(controller.get('/male', function* () {
